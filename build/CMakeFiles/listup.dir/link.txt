@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/listup.dir/listup.o  -o ../listup -rdynamic 
