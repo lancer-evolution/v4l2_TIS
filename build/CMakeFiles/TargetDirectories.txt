@@ -1,3 +1,0 @@
-/home/kazuhiro/workspace/v4l2_TIS/build/CMakeFiles/v4ldevice.dir
-/home/kazuhiro/workspace/v4l2_TIS/build/CMakeFiles/listup.dir
-/home/kazuhiro/workspace/v4l2_TIS/build/CMakeFiles/capture_one.dir

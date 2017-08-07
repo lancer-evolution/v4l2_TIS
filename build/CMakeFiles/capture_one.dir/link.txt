@@ -1,1 +1,0 @@
-/usr/bin/cc     CMakeFiles/capture_one.dir/capture_one.o  -o ../capture_one -rdynamic 
