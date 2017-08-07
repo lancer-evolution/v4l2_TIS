@@ -1,3 +1,6 @@
 build/*
 !.gitkeep
 
+/capture_one
+/listup
+/v4ldevice

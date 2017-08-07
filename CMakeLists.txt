@@ -10,7 +10,9 @@ endif ( CMAKE_COMPILER_IS_GNUCC )
 # ビルドのタイプはリリース
 #SET(CMAKE_BUILD_TYPE Release)
 # 実行ファイルの出力先の設定
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../) 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../)
+#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 #---------------------------------------------------
 
 
@@ -26,9 +28,9 @@ PROJECT(v4l2_TIS)
 find_package( OpenCV REQUIRED )
 
 #メインビルド
-ADD_EXECUTABLE(v4ldevice v4ldevice.cpp main.cpp)
+ADD_EXECUTABLE(v4ldevice src/v4ldevice.cpp src/main.cpp)
 #ターゲットリンクライブラリ
 target_link_libraries( v4ldevice ${OpenCV_LIBS} )
-ADD_EXECUTABLE(listup listup.c)
-ADD_EXECUTABLE(capture_one capture_one.c)
+ADD_EXECUTABLE(listup src/listup.c)
+ADD_EXECUTABLE(capture_one src/capture_one.c)
 
