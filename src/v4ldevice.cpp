@@ -693,7 +693,7 @@ void close_device(void)
     fd = -1;
 }
 
-void open_device(char* devicename)
+void open_device(const char* devicename)
 {
     struct stat st;
     strcpy( dev_name,devicename);

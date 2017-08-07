@@ -1,5 +1,5 @@
 
- void open_device(char* devicename); 
+ void open_device(const char* devicename); 
  void close_device(void);
 void init_device (int width, int height, int exposure);
  void init_userp (unsigned int buffer_size);

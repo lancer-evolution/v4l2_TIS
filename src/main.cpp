@@ -10,9 +10,11 @@ using namespace std;
 
 int main(int argc,char** args) {
     //カメラの初期化
-  open_device("/dev/video0"); //ここは，PCに接続したカメラの場所を指定する．１台しか接続しない場合は，通常は0番にカメラは接続されるので，このパスとなる．
+  const char *device_name = "/dev/video0";
+  open_device(device_name); //ここは，PCに接続したカメラの場所を指定する．１台しか接続しない場合は，通常は0番にカメラは接続されるので，このパスとなる．
   init_device(744, 480, 50); //キャプチャするサイズと露出を指定する．
 
+  
     //キャプチャの開始
     start_capturing();
 
