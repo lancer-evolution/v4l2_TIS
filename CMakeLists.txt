@@ -33,9 +33,10 @@ target_link_libraries( v4ldevice ${OpenCV_LIBS} )
 
 ADD_EXECUTABLE(listup src/listup.c)
 ADD_EXECUTABLE(capture_one src/capture_one.c)
-add_executable(streaming_pub src/streaming_pub.cpp src/v4ldevice)
-target_link_libraries(streaming_pub ${OpenCV_LIBS} )
-add_executable(streaming_sub src/streaming_sub.cpp)
-target_link_libraries(streaming_sub ${OpenCV_LIBS})
-
+add_executable(streaming_send src/streaming_send.cpp src/v4ldevice)
+target_link_libraries(streaming_send ${OpenCV_LIBS} )
+add_executable(streaming_recieve src/streaming_recieve.cpp)
+target_link_libraries(streaming_recieve ${OpenCV_LIBS})
+add_executable(raspberry_send src/raspberry_send.cpp src/v4ldevice)
+target_link_libraries(raspberry_send ${OpenCV_LIBS})
 
