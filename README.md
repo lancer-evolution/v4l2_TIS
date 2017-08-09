@@ -25,8 +25,8 @@ make
 ```
 
 Execute
-* UDP sender
-raspiでは`imshow`しないようにしている．
+* UDP sender  
+raspiでは`imshow`しないようにしている．  
 ```bash
 ../streaming_send
 or  
@@ -43,13 +43,13 @@ or
 
 ### 設定項目
 
-1. IP adress (default: 192.168.0.236)
+1. IP adress (default: 192.168.0.236)  
 streaming_send.cpp: `inet_addr`  
 確認方法は受け取り側のPCで`ifconfig`し，inetアドレスを見る．
-2. Video device (default: /dev/diveo0)
+2. Video device (default: /dev/diveo0)  
 streaming_send.cpp: `device_name`  
 `ls /dev/video*`により確認できる．
-3. Camera情報 (Width, Hight, Exposure, Gain, Format)
+3. Camera情報 (Width, Hight, Exposure, Gain, Format)  
 v4lとOpenCVでキャプチャするために指定する．  
 ・ streaming_send.cpp: `init_device`,`cv::Mat src`,`imecode`  
 ・ v4ldevice.cpp: `fmt.fmt.pix.pixelformat`  
