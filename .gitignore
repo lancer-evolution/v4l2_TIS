@@ -1,6 +1,8 @@
 build/*
 !.gitkeep
 
-/capture_one
-/listup
-/v4ldevice
+/*
+!/*/
+!CMakeLists.txt
+!README.md
+!.gitignore

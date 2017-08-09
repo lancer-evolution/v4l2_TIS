@@ -2,8 +2,14 @@
 
 ## Prepare
 
+1. v4l
 ```bash
 sudo apt-get install -y libv4l-dev v4l-utils qv4l2
+```
+2. OpenCV
+```bash
+sudo apt-get update
+sudo apt-get install libopencv-dev #2.4.9
 ```
 
 ## How to use

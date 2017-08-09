@@ -29,8 +29,13 @@ find_package( OpenCV REQUIRED )
 
 #メインビルド
 ADD_EXECUTABLE(v4ldevice src/v4ldevice.cpp src/main.cpp)
-#ターゲットリンクライブラリ
 target_link_libraries( v4ldevice ${OpenCV_LIBS} )
+
 ADD_EXECUTABLE(listup src/listup.c)
 ADD_EXECUTABLE(capture_one src/capture_one.c)
+add_executable(streaming_pub src/streaming_pub.cpp src/v4ldevice)
+target_link_libraries(streaming_pub ${OpenCV_LIBS} )
+add_executable(streaming_sub src/streaming_sub.cpp)
+target_link_libraries(streaming_sub ${OpenCV_LIBS})
+
 
