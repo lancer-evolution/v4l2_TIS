@@ -462,7 +462,7 @@ void init_userp (unsigned int buffer_size)
     }
 }
 
-void init_device ( int width, int height, int exposure)
+void init_device ( int width, int height, int exposure, int gain = 63)
 {
     struct v4l2_capability cap;
     struct v4l2_cropcap cropcap;
@@ -668,7 +668,7 @@ void init_device ( int width, int height, int exposure)
 	control.id = V4L2_CID_GAIN;
 	
 	if (0 == xioctl(fd, VIDIOC_G_CTRL, &control)) {
-	  control.value = 63;
+	  control.value = gain;
 	  
 	  /* The driver may clamp the value or return ERANGE, ignored here */
 	  
